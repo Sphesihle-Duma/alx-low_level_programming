@@ -1,7 +1,10 @@
 # include <stdio.h>
 
-
-/*displaying a message on the console*/
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
