@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 /**
   * main - Entry point
   *
@@ -6,11 +7,11 @@
   */
 int main(void)
 {
-	char lower_case;
+	int lower_case;
 
-	for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
+	for (lower_case = 97; lower_case <= 122; lower_case++)
 	{
-		if (lower_case != 'q' || lower_case != 'e')
+		if (lower_case != 101 && lower_case != 113)
 			putchar(lower_case);
 	}
 	putchar('\n');
