@@ -15,18 +15,15 @@ int main(void)
 		second_dig = first_dig + 1;
 		while (second_dig <= 57)
 		{
+			putchar(first_dig);
+			putchar(second_dig);
 			if (first_dig == 56 && second_dig == 57)
 			{
-				putchar(first_dig);
-				putchar(second_dig);
+				break;
 			}
-			else if (first_dig != second_dig)
-			{
-				putchar(first_dig);
-				putchar(second_dig);
-				putchar(',');
-				putchar(' ');
-			}
+			putchar(',');
+			putchar(' ');
+
 			second_dig++;
 		}
 		first_dig++;
