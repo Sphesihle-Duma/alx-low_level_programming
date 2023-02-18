@@ -20,7 +20,7 @@ int main(void)
 			dig3 = 48;
 			while (dig3 <= 57)
 			{
-				dig4 = 48;
+				dig4 = dig3 + 1;
 				while (dig4 <= 57)
 				{
 					putchar(dig1);
