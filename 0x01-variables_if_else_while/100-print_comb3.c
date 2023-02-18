@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-  * mian - Entry point
+  * main - Entry point
   *
   * Return: Always 0 (Success)
   */
@@ -15,7 +15,12 @@ int main(void)
 		second_dig = first_dig + 1;
 		while (second_dig <= 57)
 		{
-			if (first_dig != second_dig)
+			if (first_dig == 56 && second_dig == 57)
+			{
+				putchar(first_dig);
+				putchar(second_dig);
+			}
+			else if (first_dig != second_dig)
 			{
 				putchar(first_dig);
 				putchar(second_dig);
