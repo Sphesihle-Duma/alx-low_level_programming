@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
   * main - Entry point
   * Description: printing _putchar
@@ -7,12 +6,10 @@
   */
 int main(void)
 {
-	char characters[] = "_putchar";
+	char characters[8] = "_putchar";
 	int ch;
-	int length;
 
-	length = sizeof(characters) / sizeof(ch);
-	for (ch = 0; ch < length; ch++)
+	for (ch = 0; ch < 8; ch++)
 	{
 		_putchar(characters[ch]);
 	}
