@@ -6,7 +6,7 @@
   */
 int main(void)
 {
-	int num1, num2, sum, temp, count;
+	long int num1, num2, sum, temp, count;
 
 	num1 = 1;
 	num2 = 2;
