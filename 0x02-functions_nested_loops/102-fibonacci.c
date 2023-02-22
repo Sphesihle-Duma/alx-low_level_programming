@@ -11,7 +11,7 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	count = 2;
-	printf("%ld, %ld\n", num1, num2);
+	printf("%ld, %ld, ", num1, num2);
 	while (count < 50)
 	{
 		sum = num1 + num2;
