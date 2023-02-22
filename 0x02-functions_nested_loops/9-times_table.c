@@ -36,12 +36,12 @@ void times_table(void)
 				else
 				{
 					_putchar(k + 48);
+					_putchar(' ');
+					_putchar(' ');
 				}
 				if (k != i * 9 && k < 10)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
 				}
 				else if (k >= 10 && k != i * 9)
 				{
