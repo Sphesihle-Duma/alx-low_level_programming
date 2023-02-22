@@ -11,11 +11,18 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	count = 2;
-	printf("%d, %d\n", num1, num2);
+	printf("%ld, %ld\n", num1, num2);
 	while (count < 50)
 	{
 		sum = num1 + num2;
-		printf("%d, ", sum);
+		if (count == 49)
+		{
+			printf("%ld", sum);
+		}
+		else
+		{
+			printf("%ld, ", sum);
+		}
 		temp = num2;
 		num2 = sum;
 		num1 = temp;
