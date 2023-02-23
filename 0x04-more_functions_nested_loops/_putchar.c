@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "holberton.h"
+#include "main.h"
 
 /**
  * _putchar - sends the character c to stdout
