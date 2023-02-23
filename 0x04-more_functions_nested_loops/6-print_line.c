@@ -1,11 +1,11 @@
 #include "main.h"
 /**
-  * print_lines - prints lines
+  * print_line - prints lines
   *
   * @n: number of underscores
   * Return: prints _ n times
   */
-void print_lines(int n)
+void print_line(int n)
 {
 	int i;
 
