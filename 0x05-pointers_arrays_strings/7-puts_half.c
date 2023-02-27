@@ -9,7 +9,7 @@ void puts_half(char *str)
 {
 	int index = 0, j;
 
-	while index >= 0)
+	while (index >= 0)
 	{
 		if (str[index] == '\0')
 			break;
@@ -17,10 +17,11 @@ void puts_half(char *str)
 	}
 
 	if (index % 2 == 1)
-		j = count / 2;
+		j = index / 2;
 	else
-		j = (count - 1) / 2;
+		j = (index - 1) / 2;
 
-	for (j++; j < count; j++)
+	for (j++; j < index; j++)
 		_putchar(str[j]);
 	_putchar('\n');
+}
