@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 	int i, j, num_of_byte;
 
 	i = 0;
-	num_of_byte = 1;
+	num_of_byte = 0;
 	while (*(dest + i) != '\0')
 	{
 		i++;
@@ -24,7 +24,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		num_of_byte++;
 	}
-	if (n >= num_of_byte)
+	if (n <= num_of_byte)
 	{
 		for (j = 0; j < n; j++)
 		{
@@ -36,6 +36,10 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		for (j = 0; j < n; j++)
 		{
+			if (*(src + j) == '\0')
+			{
+				break;
+			}
 			dest[i] = src[j];
 			i++;
 		}
