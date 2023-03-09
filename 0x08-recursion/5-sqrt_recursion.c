@@ -7,16 +7,12 @@
   */
 int power_helper(int n, int guess)
 {
-	if (n % guess == 0)
+	if (guess % (n / guess) == 0)
 	{
 		if (guess * (n / guess) == n)
-		{
 			return (guess);
-		}
 		else
-		{
 			return (-1);
-		}
 	}
 	return (0 + power_helper(n, guess + 1));
 }
