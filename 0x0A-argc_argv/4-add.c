@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	}
 	for (count = 1; count < argc; count++)
 	{
-		for (sec = 0; *(*(argv + count) + sec) != '\0'; sec++ )
+		for (sec = 0; *(*(argv + count) + sec) != '\0'; sec++)
 		{
 			if (isdigit(*(*(argv + count) + sec)) == 0)
 			{
@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
 			}
 		}
 		sum += atoi(argv[count]);
-		
 	}
 	if (sum > 0)
 		printf("%d\n", sum);
