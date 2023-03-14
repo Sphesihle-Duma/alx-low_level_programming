@@ -6,5 +6,6 @@ char *_strdup(char *str);
 char *str_concat(char *s1, char *s2);
 int my_strlen(char *s);
 void my_strcpy(char *dest, char *src);
+int **alloc_grid(int width, int height);
 
 #endif
