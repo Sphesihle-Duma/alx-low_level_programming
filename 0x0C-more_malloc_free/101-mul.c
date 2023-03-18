@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 /**
   * print_error - prints error and exit
   * @s: error message
@@ -56,6 +57,7 @@ int _atoi(char *s)
 {
 	int result = 0;
 	int sign = 1;
+	int overflow = 0;
 
 	while (*s != '\0')
 	{
@@ -65,9 +67,15 @@ int _atoi(char *s)
 		}
 		else
 		{
+			if (result > INT_MAX / 10)
+				overflow = 1;
 			result = (result * 10) + (*s - 48);
 		}
 		s++;
+	}
+	if (overflow)
+	{
+		exit(98);
 	}
 	return (result * sign);
 }
