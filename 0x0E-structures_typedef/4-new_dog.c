@@ -27,7 +27,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	name_copy = malloc(sizeof(char) * (len_name + 1));
 	owner_copy = malloc(sizeof(char) * (len_owner + 1));
 	if (name_copy == NULL || owner_copy == NULL)
+	{
+		free(ptr);
+		free(name_copy);
+		free(owner_copy);
 		return (NULL);
+	}
 	for (i = 0; name[i] != '\0'; i++)
 		name_copy[i] = name[i];
 	name_copy[i] = '\0';
