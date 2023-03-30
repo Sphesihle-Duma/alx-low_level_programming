@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
   * print_list - prints strings and their lengths
-  * @list: list
+  * @h: pointer to a list
   * Return: number of nodes
   */
 size_t print_list(const list_t *h)
@@ -13,7 +13,6 @@ size_t print_list(const list_t *h)
 		return (-1);
 	while (h)
 	{
-		
 		if (!h->str)
 			printf("[0] (nil)\n");
 		else
