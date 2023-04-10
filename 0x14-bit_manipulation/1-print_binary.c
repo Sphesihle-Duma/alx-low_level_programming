@@ -6,7 +6,21 @@
   */
 void print_binary(unsigned long int n)
 {
-	if (n / 2)
-		print_binary(n / 2);
-	_putchar(n % 2 + 48);
+	int i, count = 0;
+
+	if (n == 0)
+		_putchar (48);
+	if (n == ULONG_MAX)
+	{
+		for (i = 0; i < 64; i++)
+		{
+			_putchar('1');
+		}
+	}
+	for (i = 0; n >> i; i++)
+		count++;
+	for (i = count - 1; i >= 0; i--)
+	{
+		_putchar((n >> i & 1) ? '1' : '0');
+	}
 }
