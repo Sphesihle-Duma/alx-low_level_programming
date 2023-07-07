@@ -21,12 +21,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_element->key = strdup(key);
 	new_element->value = strdup(value);
 	if (!new_element->key || !new_element->value)
-		return (0);
+	{
+		free(new_element->key);
+		free(new_element->value);
+		free(new_element);
+	}
 	tmp = ht->array[index];
 	if (!tmp)
 	{
 		new_element->next = NULL;
-		tmp = new_element;
+		ht->array[index] = new_element;
 		return (1);
 	}
 	while (tmp)
