@@ -7,9 +7,10 @@ void hash_table_print(const hash_table_t *ht)
 {
 	hash_node_t *tmp;
 	unsigned long int i;
+	bool comma = false;
 
 	if (!ht)
-		printf("{}");
+		printf("{}\n");
 	else
 	{
 		printf("{");
@@ -18,9 +19,10 @@ void hash_table_print(const hash_table_t *ht)
 			tmp = ht->array[i];
 			while (tmp)
 			{
-				printf("\'%s\' : \'%s\'\n", tmp->key, tmp->value);
-				if (tmp->next != NULL && i < (ht->size - 1))
+				if (comma)
 					printf(", ");
+				printf("\'%s\' : \'%s\'", tmp->key, tmp->value);
+				comma = true;
 				tmp = tmp->next;
 			}
 		}
